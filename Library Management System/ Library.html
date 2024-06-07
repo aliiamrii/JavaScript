@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Step 1: Define the Book Object
+        function createBook(title, author, year, available) {
+            return {
+                title: title,
+                author: author,
+                year: year,
+                available: available
+            };
+        }
+
+        // Step 2: Library Object
+        const library = {
+            books: [],
+
+            // Step 3: Add a new book
+            addBook: function (book) {
+                //push the book in books array
+            },
+
+            // Step 3: Remove a book by title(اختیاری)
+            // removeBook: function (title) {
+            //     this.books = this.books.filter(book => book.title !== title);
+            // },
+
+            // Step 3: List all books
+            listBooks: function () {
+                console.log("Listing all books:");
+                //use forloop to cycle in the books array
+            },
+
+            // Step 3: Find a book by title
+            findBook: function (title) {
+                //use forloop to cycle in the books array
+                //note that there is an if to check the title!
+            },
+
+            // Step 3: List all books by author
+            listBooksByAuthor: function (author) {
+                console.log(`Listing all books by ${author}:`);
+                //use forloop to cycle in the books array
+                //note that there is an if to check the author!
+                
+            }
+        };
+
+        // Example
+        const book1 = createBook("The Great Gatsby", "F. Scott Fitzgerald", 1925, true);
+        const book2 = createBook("To Kill a Mockingbird", "Harper Lee", 1960, false);
+        const book3 = createBook("1984", "George Orwell", 1949, true);
+
+        library.addBook(book1);
+        library.addBook(book2);
+        library.addBook(book3);
+
+        library.listBooks();
+        console.log(library.findBook("1984"));
+        library.listBooksByAuthor("George Orwell");
+        library.removeBook("1984");
+        library.listBooks();
+
+    </script>
+
+</body>
+
+</html>
